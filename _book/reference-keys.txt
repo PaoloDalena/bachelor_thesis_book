@@ -1,0 +1,14 @@
+fig:nice-fig
+tab:nice-tab
+preface-to-the-english-version
+intro
+literature
+methods
+applications
+example-one
+example-two
+final-words
+annual-reports-of-the-bank-of-italy
+final-remarks-by-the-governor
+text-mining-on-complex-text-sources
+fig:unnamed-chunk-1
