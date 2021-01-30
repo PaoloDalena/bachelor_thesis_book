@@ -30,6 +30,28 @@ This discipline, also known by the acronym TM, therefore, deals with the search,
 TM is a multidisciplinary field based on different sets of techniques, grouped under the name of information retrieval, data mining, machine learning, statistics, and computational linguistics. Figure 1 shows the interactions between text mining and some of the areas presented. 
 
 ```{r, echo=FALSE, dpi = 50, fig.cap= "Interaction of Text Mining with other research fields"}
-knitr::include_graphics("introimg.png")
+knitr::include_graphics("tmimg.png")
 ```
 
+Given the wide range of possible applications of the technique in question, providing an exhaustive and universal description of how the TM process takes place is a particularly difficult task. However, it is possible to recognize some steps:  
+
+- Data collection: first step that involves the collection and selection of documents that may be useful for analysis.  
+- Text pre-processing: in which the raw text is adapted into analyzable text. Specifically, pre-processing and cleaning operations are performed to detect and remove anomalies so that the true essence of the available text can be captured and also simply to reduce the size of the data. At this stage, procedures of:  
+
+    - Tokenization, which allows breaking a sequence of characters into units (usually words or phrases) called tokens.  
+    - Filtering, in order to remove unnecessary parts of the text.  
+    - Lemmatization, which causes the various inflected forms of a word to be grouped together in such a way that they are analyzed as a single entity.  
+    - Derivation, which is the process by which a form (theme or word) is created from a pre-existing root or word.  
+
+- Application of text mining techniques: this is the phase of greatest interest, in which textual data (keywords, concepts, verbs, nouns, adjectives, etc.) are extracted using techniques based on different algorithms. Among these, the most popular are:  
+
+    - Text Categorization: represents the beginning of the text analysis process by assigning predefined categories to tokens;  
+    - Information Extraction: is a technique that extracts meaningful information from a large amount of text. Usually this information is taken from unstructured and/or semi-structured machine-readable documents and transformed into structured information.  
+    - Information retrieval: represents the set of techniques used to manage the representation, storage, organization and access to objects containing information such as documents, web pages, online catalogs and multimedia objects. It is also used by Google and Yahoo search engines to extract documents from a web search.  
+    - Clustering: is an unsupervised process of classifying text documents into similar groups called clusters. In a cluster, sets of text that relate to the same topic or identical keywords are grouped together.  
+    - Text Summary: This is the problem of creating a short, accurate, and fluent summary of a longer text document.  
+    - Sentiment analysis: also known as opinion mining, this method is used to extract subjective information from content. Just as the term suggests, it has to do with emotion, sentiment. Basically, it is applied to understand the emotional response of a subject in a context.  
+
+The software and programming languages that allow the implementation of TM techniques are different and with different characteristics. In this discussion, as we will see in detail later, the analysis was conducted almost entirely on R.
+In conclusion, it should be added that the Governor's Final Remarks are only available online in PDF (Portable Document Format). This format is undoubtedly the most widely used format for disseminating publications available on the web, as it allows words to be organized into columns, graphs, and tables making it easier for humans to read. However, what makes it easy for humans, it makes impossible for machines to use directly. 
+TM algorithms, in fact, are directly applicable only if the data source is simple. This is the case when, for example, you have text files (.txt format), i.e. documents that contain only letters, numbers, punctuation marks, spaces and other printable symbols. With PDFs, given the presence of text formatted in different ways, images, graphics, tables or any other type of multimedia content, the situation becomes very complicated (this is why we talk about complex text sources). Therefore, it is necessary to carefully extract and transform the data, which will be discussed in detail later.

@@ -12,7 +12,7 @@ github-repo: rstudio/bookdown-demo
 description: "This is the English version of my Bachelor Thesis - TEXT MINING ON COMPLEX TEXT SOURCES: ANALYSIS OF THE FINAL CONSIDERATIONS OF THE GOVERNOR ON THE ANNUAL REPORTS OF THE BANK OF ITALY FROM 2008 TO 2017"
 ---
 
-# Preface to the English version
+# Preface to the English version {-}
 
 This is the English version of my Bachelor Thesis **"TEXT MINING SU SORGENTI DI TESTO COMPLESSE: ANALISI DELLE CONSIDERAZIONI FINALI DEL GOVERNATORE SULLE RELAZIONI ANNUALI DELLA BANCA D'ITALIA DAL 2008 AL 2017"** that I wrote for the [Bachelor in Statistical Sciences](https://corsi.unibo.it/1cycle/StatisticalSciences) degree I received on July 10, 2019 at [Alma Mater Studiorium - University of Bologna](https://www.unibo.it/en/homepage).  
 You can find the link to the Github page of my workflow [here](https://github.com/PaoloDalena/tesi) and the official published documents [here](https://github.com/PaoloDalena/tesi/tree/master/Tesi_docs).  
