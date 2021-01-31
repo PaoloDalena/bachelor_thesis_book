@@ -1,3 +1,8 @@
 `r if (knitr:::is_html_output()) '
 # References {-}
 '`
+(1) Banca d’Italia, «Banca d’Italia - Chi siamo», consultato 17 giugno 2019, https://www.bancaditalia.it/chi-siamo/index.html.
+
+(2) «Governatore della Banca d’Italia», in Wikipedia, 15 maggio 2019, https://it.wikipedia.org/w/index.php?title=Governatore_della_Banca_d%27Italia&oldid=104906596.
+
+(3) Ramzan Talib et al., «Text Mining: Techniques, Applications and Issues», International Journal of Advanced Computer Science and Applications 7, n. 11 (2016), https://doi.org/10.14569/IJACSA.2016.071153.
