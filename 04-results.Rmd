@@ -1,0 +1,15 @@
+# Results and discussion
+
+
+## Parts of speech distribution
+
+
+## Lexical characteristics
+
+## Wordcloud by periods
+
+## Comparison cloud and commonalty cloud
+
+## Positivity of the lemmas
+
+## Topics of the parts of the text

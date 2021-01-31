@@ -1,3 +1,11 @@
 # Methods
 
-We describe our methods in this chapter.
+## Exporting text
+### Literature Review
+### Automating text extraction with R
+
+## Lemmatization, categorization and cleaning
+## Analysis of lexical differences
+## Word Cloud Creation
+## Sentiment analysis
+## Topic modeling
