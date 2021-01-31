@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="1.3 Text mining on complex text sources | TEXT MINING ON COMPLEX TEXT SOURCES: ANALYSIS OF THE FINAL CONSIDERATIONS OF THE GOVERNOR ON THE ANNUAL REPORTS OF THE BANK OF ITALY FROM 2008 TO 2017" />
+<meta property="og:type" content="book" />
+
+
+<meta property="og:description" content="This is the English version of my Bachelor Thesis - TEXT MINING ON COMPLEX TEXT SOURCES: ANALYSIS OF THE FINAL CONSIDERATIONS OF THE GOVERNOR ON THE ANNUAL REPORTS OF THE BANK OF ITALY FROM 2008 TO 2017" />
+<meta name="github-repo" content="rstudio/bookdown-demo" />
+
+<meta name="author" content="Paolo Dalena" />
+
+<meta name="date" content="2021-01-30" />
+
+
+<meta name="description" content="This is the English version of my Bachelor Thesis - TEXT MINING ON COMPLEX TEXT SOURCES: ANALYSIS OF THE FINAL CONSIDERATIONS OF THE GOVERNOR ON THE ANNUAL REPORTS OF THE BANK OF ITALY FROM 2008 TO 2017">
+
+<title>1.3 Text mining on complex text sources | TEXT MINING ON COMPLEX TEXT SOURCES: ANALYSIS OF THE FINAL CONSIDERATIONS OF THE GOVERNOR ON THE ANNUAL REPORTS OF THE BANK OF ITALY FROM 2008 TO 2017</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#preface-to-the-english-version">Preface to the English version</a></li>
+<li class="has-sub"><a href="1-intro.html#intro"><span class="toc-section-number">1</span> Introduction</a><ul>
+<li><a href="1-1-annual-reports-of-the-bank-of-italy.html#annual-reports-of-the-bank-of-italy"><span class="toc-section-number">1.1</span> Annual Reports of the Bank of Italy</a></li>
+<li><a href="1-2-final-remarks-by-the-governor.html#final-remarks-by-the-governor"><span class="toc-section-number">1.2</span> Final remarks by the Governor</a></li>
+<li><a href="1-3-text-mining-on-complex-text-sources.html#text-mining-on-complex-text-sources"><span class="toc-section-number">1.3</span> Text mining on complex text sources</a></li>
+</ul></li>
+<li><a href="2-literature.html#literature"><span class="toc-section-number">2</span> Literature</a></li>
+<li><a href="3-methods.html#methods"><span class="toc-section-number">3</span> Methods</a></li>
+<li class="has-sub"><a href="4-applications.html#applications"><span class="toc-section-number">4</span> Applications</a><ul>
+<li><a href="4-1-example-one.html#example-one"><span class="toc-section-number">4.1</span> Example one</a></li>
+<li><a href="4-2-example-two.html#example-two"><span class="toc-section-number">4.2</span> Example two</a></li>
+</ul></li>
+<li><a href="5-final-words.html#final-words"><span class="toc-section-number">5</span> Final Words</a></li>
+<li><a href="references.html#references">References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="text-mining-on-complex-text-sources" class="section level2">
+<h2><span class="header-section-number">1.3</span> Text mining on complex text sources</h2>
+<p>Data mining is the set of techniques and methodologies that aim to extract useful information from large amounts of data, through automatic or semi-automatic methods (such as machine learning).
+Text mining, also called text data mining or (in some ways incorrectly) text analytics, is a particular form of data mining in which the data consists of natural language texts, in other words “unstructured” documents. Text mining combines language technology with data mining algorithms. The goal is the same: the extraction of implicit information contained in a set of documents.
+This discipline, also known by the acronym TM, therefore, deals with the search, analysis and thematic classification of information contained in documents. Unlike most of the data with which statistics works, in textual documents the information is present in the form of free text (sentences and words) and only to a small extent as structured text (tables, graphs, etc.). It must also be said that much of the communication, hence information exchange, between human beings takes place through unstructured documentation (books, newspapers, conversations).
+TM is a multidisciplinary field based on different sets of techniques, grouped under the name of information retrieval, data mining, machine learning, statistics, and computational linguistics. Figure 1 shows the interactions between text mining and some of the areas presented.</p>
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="tmimg.png" alt="Interaction of Text Mining with other research fields" width="750" />
+<p class="caption">
+Figure 1.1: Interaction of Text Mining with other research fields
+</p>
+</div>
+<p>Given the wide range of possible applications of the technique in question, providing an exhaustive and universal description of how the TM process takes place is a particularly difficult task. However, it is possible to recognize some steps:</p>
+<ul>
+<li><p>Data collection: first step that involves the collection and selection of documents that may be useful for analysis.<br />
+</p></li>
+<li><p>Text pre-processing: in which the raw text is adapted into analyzable text. Specifically, pre-processing and cleaning operations are performed to detect and remove anomalies so that the true essence of the available text can be captured and also simply to reduce the size of the data. At this stage, procedures of:</p>
+<ul>
+<li>Tokenization, which allows breaking a sequence of characters into units (usually words or phrases) called tokens.<br />
+</li>
+<li>Filtering, in order to remove unnecessary parts of the text.<br />
+</li>
+<li>Lemmatization, which causes the various inflected forms of a word to be grouped together in such a way that they are analyzed as a single entity.<br />
+</li>
+<li>Derivation, which is the process by which a form (theme or word) is created from a pre-existing root or word.</li>
+</ul></li>
+<li><p>Application of text mining techniques: this is the phase of greatest interest, in which textual data (keywords, concepts, verbs, nouns, adjectives, etc.) are extracted using techniques based on different algorithms. Among these, the most popular are:</p>
+<ul>
+<li>Text Categorization: represents the beginning of the text analysis process by assigning predefined categories to tokens;<br />
+</li>
+<li>Information Extraction: is a technique that extracts meaningful information from a large amount of text. Usually this information is taken from unstructured and/or semi-structured machine-readable documents and transformed into structured information.<br />
+</li>
+<li>Information retrieval: represents the set of techniques used to manage the representation, storage, organization and access to objects containing information such as documents, web pages, online catalogs and multimedia objects. It is also used by Google and Yahoo search engines to extract documents from a web search.<br />
+</li>
+<li>Clustering: is an unsupervised process of classifying text documents into similar groups called clusters. In a cluster, sets of text that relate to the same topic or identical keywords are grouped together.<br />
+</li>
+<li>Text Summary: This is the problem of creating a short, accurate, and fluent summary of a longer text document.<br />
+</li>
+<li>Sentiment analysis: also known as opinion mining, this method is used to extract subjective information from content. Just as the term suggests, it has to do with emotion, sentiment. Basically, it is applied to understand the emotional response of a subject in a context.</li>
+</ul></li>
+</ul>
+<p>The software and programming languages that allow the implementation of TM techniques are different and with different characteristics. In this discussion, as we will see in detail later, the analysis was conducted almost entirely on R.
+In conclusion, it should be added that the Governor’s Final Remarks are only available online in PDF (Portable Document Format). This format is undoubtedly the most widely used format for disseminating publications available on the web, as it allows words to be organized into columns, graphs, and tables making it easier for humans to read. However, what makes it easy for humans, it makes impossible for machines to use directly.
+TM algorithms, in fact, are directly applicable only if the data source is simple. This is the case when, for example, you have text files (.txt format), i.e. documents that contain only letters, numbers, punctuation marks, spaces and other printable symbols. With PDFs, given the presence of text formatted in different ways, images, graphics, tables or any other type of multimedia content, the situation becomes very complicated (this is why we talk about complex text sources). Therefore, it is necessary to carefully extract and transform the data, which will be discussed in detail later.</p>
+
+</div>
+<!-- </div> -->
+<p style="text-align: center;">
+<a href="1-2-final-remarks-by-the-governor.html"><button class="btn btn-default">Previous</button></a>
+<a href="2-literature.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

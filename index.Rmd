@@ -1,7 +1,7 @@
 --- 
 title: "Text Mining On Complex Text Sources: Analysis Of The Final Considerations Of The Governor On The Annual Reports Of The Bank Of Italy From 2008 To 2017"
 author: "Paolo Dalena"
-date: "`r Sys.Date()`"
+date: "July 10, 2019"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 cover.image: "cover.png"
