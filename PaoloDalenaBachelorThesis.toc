@@ -1,0 +1,29 @@
+\contentsline {section}{Preface to the English version}{2}{section*.2}%
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Annual Reports of the Bank of Italy}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Final remarks by the Governor}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Text mining on complex text sources}{4}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Objectives}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Lexical differences}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Most used terms}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Positive or negative approach}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Recurring Topics}{6}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Methods}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Exporting text}{7}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Literature Review}{7}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Automating text extraction with R}{7}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Lemmatization, categorization and cleaning}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Analysis of lexical differences}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Word Cloud Creation}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Sentiment analysis}{9}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Topic modeling}{9}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Results and discussion}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Parts of speech distribution}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Lexical characteristics}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Wordcloud by periods}{12}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Comparison cloud and commonalty cloud}{13}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Positivity of the lemmas}{16}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Topics of the parts of the text}{18}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Conclusions}{19}{section.5}%
+\contentsline {section}{Acknowledgements}{20}{section*.3}%
+\contentsline {section}{References}{20}{section*.4}%

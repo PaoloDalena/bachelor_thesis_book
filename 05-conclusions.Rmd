@@ -1,0 +1,17 @@
+# Conclusions
+
+Following the presentation of the results, it is necessary and proper to reconstruct a common thread within them and discuss the limits of the analysis performed.  
+
+The path followed has made it possible to delve into three fundamental aspects of the Governor's Final Remarks: the style and language used, the tones and opinions through which the concepts were presented, and the themes dealt with over the years.  
+
+With regard to the first point, the analysis of the average distribution of the parts of speech made it possible to trace the textual typology to which the data belong to that typical of an expository text with scientific and objective language. Moreover, by examining the evolution over time of the length of words and sentences and of the MTLD index, it was concluded that, as the years go by, treatises tend to be more and more exhaustive and characterized by a more restricted vocabulary.  
+
+Regarding tones and opinions, opinion mining operations allowed to demonstrate how most of the terms in the treatises are related to positive emotions. Moreover, starting from the trend of polarity over the years, it was possible to reconstruct three periods marked by similar characteristics. The first, consisting of the years 2008, 2009 and 2010, shows positivity in line with the overall average. The intermediate one, from the years 2011 to 2014, is characterized by a significantly higher concentration of positive lemmas. The last interval, consisting of 2015, 2016 and 2017, is instead marked by less positive average terms.  
+
+We also find these considerations in the analysis of themes. In fact, the wordclouds and the results of the application of topic modeling show that the topics of greatest discussion in the three periods are, respectively, the crisis, the European market and public debt. These results were confirmed by the observation of the recurrent topics in the treatments over time. Finally, the study of the lemmas present in the commonalty cloud has allowed us to reconstruct the macro-topics that the publication generally deals with, i.e. the market, companies and the economy.  
+
+However, it must be said that the conclusions described, although decidedly relevant and in line with what has been the history of the Italian economy in the period of reference, may have been subject to two different forms of distortion.  
+
+The first is related to the inevitable loss of information that occurs during automatic text extraction and recognition processes. In fact, the functions, algorithms and software used, despite being unquestionably accurate, are not flawless. Therefore, it can happen, and according to the law of large numbers it has certainly happened, that a word is recognized incorrectly or not at all.  
+
+The second, unfortunately of greater potential importance, is connected to the interpretation that has been given to the results. If before, therefore, it was a matter of machine inaccuracy, now we speak of human error. It is natural that the commentary, despite being made from objective data, is subjective, and therefore necessarily different from what another individual would have offered. On the other hand, it is impossible to identify an interpretation that is undeniably right or wrong, or even one that is more right than another. For my part, I can consider myself decidedly satisfied. And that's what's important.  

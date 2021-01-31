@@ -5,3 +5,41 @@
 (2) «Governatore della Banca d’Italia», in Wikipedia, 15 maggio 2019, https://it.wikipedia.org/w/index.php?title=Governatore_della_Banca_d%27Italia&oldid=104906596.
 
 (3) Ramzan Talib et al., «Text Mining: Techniques, Applications and Issues», International Journal of Advanced Computer Science and Applications 7, n. 11 (2016), https://doi.org/10.14569/IJACSA.2016.071153.
+
+(4) «Text mining: il processo di estrazione del testo», Lorenzo Govoni (blog), 16 luglio 2018, https://lorenzogovoni.com/text-mining/.
+
+(5) Banca d’Italia, «Banca d’Italia - Interventi del Governatore», consultato 20 giugno 2019, https://www.bancaditalia.it/pubblicazioni/interventi-governatore/index.html.
+
+(6) Hannah Bast e Claudius Korzen, «A Benchmark and Evaluation for Text Extraction from PDF», in Proceedings of the 17th ACM/IEEE Joint Conference on Digital Libraries, JCDL ’17 (Piscataway, NJ, USA: IEEE Press, 2017), 99–108, http://dl.acm.org/citation.cfm?id=3200334.3200346.
+
+(7) «ad-freiburg/pdfact: A basic tool that extracts the structure from the PDF files of scientific articles.», consultato 12 febbraio 2019, https://github.com/ad-freiburg/pdfact.
+
+(8) Ingo Feinerer et al., tm: Text Mining Package, version 0.7-6, 2018, https://CRAN.R-project.org/package=tm.
+
+(9) «TreeTagger - a language independent part-of-speech tagger | Institute for Natural Language Processing | University of Stuttgart», consultato 20 giugno 2019, https://www.ims.uni-stuttgart.de/forschung/ressourcen/werkzeuge/treetagger.en.html.
+
+(10) Meik Michalke et al., koRpus: An R Package for Text Analysis, version 0.11-5, 2018, https://CRAN.R-project.org/package=koRpus.
+
+(11) «stopwords function | R Documentation», consultato 20 giugno 2019, https://www.rdocumentation.org/packages/tm/versions/0.7-6/topics/stopwords.
+
+(12) «Using the koRpus Package for Text Analysis», consultato 21 giugno 2019, https://cran.r-project.org/web/packages/koRpus/vignettes/koRpus_vignette.html#accessing-data-from-korpus-objects.
+
+(13) «MTLD: Lexical Diversity: Measure of Textual Lexical Diversity... in KoRpus: An R Package for Text Analysis», consultato 21 giugno 2019, https://rdrr.io/cran/koRpus/man/MTLD.html.
+
+(14) Ian Fellows, wordcloud: Word Clouds, version 2.6, 2018, https://CRAN.R-project.org/package=wordcloud.
+
+(15) Dawei Lang e Guan-tin Chien, wordcloud2: Create Word Cloud by «htmlwidget», version 0.2.1, 2018, https://CRAN.R-project.org/package=wordcloud2.
+
+(16) Fabrizio Alboni e Ignazio Drudi, «Materiale didattico fornito per l’insegnamento Utilizzo Statistico di Banche Dati Economiche Online, Laurea in Scienze statistiche, Università di Bologna», 2018-2019.
+
+(17) «Janyce Wiebe/Jan Wiebe», consultato 22 giugno 2019, https://people.cs.pitt.edu/~wiebe/.
+
+(18) «NRC Emotion Lexicon», consultato 22 giugno 2019, https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm.
+
+(19) Matthew Jockers, syuzhet: Extracts Sentiment and Sentiment-Derived Plot Arcs from Text, version 1.0.4, 2017, https://CRAN.R-project.org/package=syuzhet.
+
+(20) Bettina Grün e Kurt Hornik, topicmodels: Topic Models, version 0.2-8, 2018, https://CRAN.R-project.org/package=topicmodels.
+
+(21) «Come funziona LDA - Amazon SageMaker», consultato 28 giugno 2019, https://docs.aws.amazon.com/it_it/sagemaker/latest/dg/lda-how-it-works.html.
+
+(22) «Debito pubblico: come, quando e perché è esploso in Italia», Il Sole 24 ORE, consultato 25 giugno 2019, https://www.ilsole24ore.com/art/debito-pubblico-come-quando-e-perche-e-esploso-italia-AEMRbSRG.

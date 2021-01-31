@@ -1,11 +1,77 @@
 # Methods
 
 ## Exporting text
+
+As already mentioned, the data subject to this analysis are only available in complex form, i.e. in PDF format. It was therefore necessary, first, to search for software that offered the best performance in accurately exporting text and, second, to automate the process.  
+
+In order to understand the particular capabilities of the different methods for importing text from PDF so that we could understand which one is the most accurate and, in particular, the most suitable for our needs, a literature review was conducted on the subject.  
+
+Once the software was found, its operation was automated by creating an R package containing the functions useful to the cause.  
+
 ### Literature Review
+
+The literature review, conducted on the archives of arXiv2*(Archive of scientific articles in physics, mathematics, computer science, quantitative finance, and biology, accessible via https://arxiv.org/)* and ACM (Association of Computer Machinery) Digital Library *(Collection of all ACL publications, accessible via https://dl.acm.org/)*, allowed to study a publication[(6)][References] that offers a perfect overall synthesis of the existing software until then (June 2017) divided according to their different features and capabilities.  
+
+Thirteen different programs were evaluated, chosen to exclude those with similar functioning, plus one (PdfAct[(7)][References], initially called Icecite) presented in the article.  Of these, the characteristics were analyzed in terms of identification of paragraph boundaries, correct reading order, and semantic roles of terms; translation capabilities of ligatures, diacritical marks, and hyphenated words; and possible output formats.  
+
+Once the capabilities of individual software were understood, the analysis in the publication shifted its focus to performance evaluations. We examined the possible errors in word or paragraph recognition on the output of an archive made up of about twelve thousand scientific articles randomly taken from arXiv, in PDF format.
+After a careful evaluation of the characteristics and performances of the different softwares, we concluded that the most suitable for our purpose is PdfAct, the one proposed by the authors of the article. The latter is a Java library capable of recognizing and separating LTBs (Logical Text Blocks) according to a rule-based approach that analyzes distances, positions and fonts of characters.  
+
 ### Automating text extraction with R
 
+Following the literature review, some functions have been created, grouped in a larger R package called corecage , which allow to automatically perform the data extraction process entirely through R. These functions are able to create simple files in .txt format containing the text accurately extracted from the Governor's Final Remarks (in PDF format), simply providing the path of the folder where the PDFs are present and the path of the folder where you want to organize the new text files.  
+
+Although the software used is a Java library and therefore does not lend itself to being used directly in an R environment, it is possible to execute all the commands comfortably within the latter. *(As a string is executed directly as a System command thanks to the system base function. For further clarification on the functions used, please refer to the R help provided in the corecage package documentation.)*  
+
+This made it possible to have simple files containing only the terms present in the body and in the headings of the paragraphs of the Governor's final considerations. These 10 files (one for each year of interest) were, therefore, used for the creation of the corpus of documents on which the subsequent analyses were carried out, using the tm[(8)][References] library for text mining on R.  
+
 ## Lemmatization, categorization and cleaning
+
+In order to accurately perform the process of reducing a flexed form of a word to its canonical form, called lemma, we used an external tool called TreeTagger. The latter is a tool that allows to annotate words contained in texts of various languages with the appropriate grammatical category and lemma and was developed by Helmut Schmid as part of the TC project at the Institute for Computational Linguistics at the University of Stuttgart. [(9)][References]  
+
+In order to use this tool in an R environment, we used a library called koRpus, available on CRAN, which offers several useful services for text analysis, including a wrapper for TreeTagger, and the support library for the Italian language (koRpus.lang.it).[(10)][References]  
+
+Starting from the output provided by this tool, it is therefore possible to reduce the words coming from the same lemma to a single entity and organize them according to their grammatical category. We will be able, therefore, to observe how the different parts of speech are distributed in our documents.  
+
+Once we obtained the lemmas organized by grammatical category, the so-called stopwords were removed from the data. The latter are the most common words of a language (such as articles or conjunctions), which are usually more present in a text and could create problems in the analysis. For obvious reasons, moreover, the terms that recur in these particular texts under analysis have been eliminated and therefore, specifically, words like "consideration", "final", "governor", "bank", "Italy", etc. Finally, in order to obtain an exhaustive list of the stopwords of the Italian language, we used the stopwords function implemented in the tm package, which provides a list of terms to be removed for different languages, including Italian. [(11)][References]  
+
 ## Analysis of lexical differences
+
+Using the describe function of the koRpus library it is possible to observe various descriptive statistics on the data resulting from the application of lemmatization with TreeTagger. These include several indices describing the number of characters in the documents (all characters, no spaces, only letters, etc), the number of words and sentences and their average length.[(12)][References]  
+
+Moreover, through a special function[(13)][References] of the same package, it was possible to calculate the various MTLD indices (Measure of Textual Lexical Diversity). These indices are clear indicators of the lexical richness of the text, as they are calculated from the ratio between the number of unique terms present in a text and the total number of words within it.*(Such a description of how the calculation occurs is decidedly simplistic. For further clarification, see McCarthy, Philip M., and Scott Jarvis. "MTLD, Vocd-D, and HD-D: A Validation Study of Sophisticated Approaches to Lexical Diversity Assessment." Behavior Research Methods 42, no. 2 (May 1, 2010): 381-92)* In fact, the increase in the number of words that are not repeated in a document corresponds to the use of a wider vocabulary, synonymous with greater lexical richness.  
+
 ## Word Cloud Creation
+The lemmatized, categorized, and cleaned data were then organized according to the frequency with which they appear within the various documents, so that word clouds could be constructed using the R packages wordcloud[(14)][References] and wordcloud2[(15)][References].  
+
+Within the word clouds, then, terms will appear larger the more frequently they appear in the Governor's Final Considerations. Underlying this weighting is the simple idea that in a document, the more frequent words are, the more important and meaningful they tend to be to the content.  
+
+The word cloud is a type of chart commonly used to succinctly visualize the content of a speech or set of documents, and can provide insights into understanding and interpreting the content of texts. From a statistical point of view, it is equivalent to a univariate frequency bar graph. Compared to this type of graph, the wordcloud certainly makes it more difficult to quantify the relative frequency of words, however, it has the advantage of allowing a visualization that immediately captures the relevance of words.  
+
+Furthermore, the comparison cloud and the commonalty cloud were used to compare documents within the corpus. In the former, word size is defined according to the different word presence rates within each document: the comparison cloud highlights, therefore, the differences. The commonality cloud, on the other hand, highlights words common to all documents. In this second case, the size of the word is a function of its minimum frequency across documents. So if a word is missing from any document it has zero size (i.e. it is not displayed).[(16)][References]  
+
+The word clouds of the comparisons were constructed by using the specific functions comparison.cloud and commonality.cloud of the wordcloud library, while the overall word clouds were created thanks to functions contained in the wordcloud2 package, which offers greater freedom in terms of graphic style.  
+
+For practical reasons, related to the difficulty of interpreting ten different clouds, we chose to group the documents in three periods. The first includes the years 2008 to 2010, the second those from 2011 to 2014, and the third those from 2015 to 2017. Comparisons were also constructed from the data thus divided.  
+
+Finally, because the items are organized into grammatical categories, it was possible to construct the word clouds by limiting analysis to only one of these types at a time. Given the limited information contained in secondary parts of speech, it was repeatedly chosen to include only nouns in the lemmatized wordclouds.  
+
 ## Sentiment analysis
+
+In order to link to the words contained in the data their polarity, positive or negative, it is necessary to use a dictionary of opinion word (called lexicon), that is a real list of adjectives, nouns, verbs and adverbs to which are associated the emotions, and therefore the opinions, that they reflect. For example, the word "sun" will be associated with the emotion of joy and a positive opinion, while the word "abandonment" will be associated with a feeling of sadness and a negative polarity.  
+
+However, finding a lexicon properly constituted for the Italian language is an arduous task. It is undoubtedly easier to find one in English. For the following analysis, therefore, the polarities of the terms have been extracted from the Italian translations of two different dictionaries.  
+
+The first one is the subjectivity lexicon by Janyce Wiebe[(17)][References], professor at the Department of Computer Science and Intelligent Systems Program of the University of Pittsburgh, and has been used through some adaptations of the functions contained in the sentiment library. The second is the NRC emotion lexicon[(18)][References], provided by Saif M. Mohammad, Senior Research Scientist at the National Research Council Canada. The latter is accessible, in English, through the syuzhet library[(19)][References], so it has been used through adaptations of the functions contained in this package.  
+
 ## Topic modeling
+
+The application of topic modeling algorithms allows us to identify the topics of each individual section that goes to make up an entire document. Thus far in the analysis, we have considered the data as a corpus consisting of ten texts, each containing the lemmatized terms of the Governor's Final Considerations. Given the goal of searching for recurring topics within the individual publications, it was necessary to reorganize the texts.  
+
+Ten different corpora consisting of each individual publication were created. Therefore, if up to now we have worked with a corpus of ten documents, from now on we will analyze ten corpora consisting of one document each.  
+
+In order to recognize the topics characterizing the sections of each publication, we used, by means of the LDA function present in the topicmodels library[(20)][References], a particular probabilistic model of the text called Latent Dirichlet Allocation (LDA). This is a very elaborate technique that lends itself to countless applications. To name a few, it is the method by which the results of a Google search are ordered by relevance, but also the one used by Amazon for clustering customers based on their purchases.[(21)][References]  
+
+The output provided by this function is loaded with information, including many of complicated interpretation. In order to simplify its understanding and use in line with our objective, it has been used in such a way as to obtain the four lemmas that are most likely to be part of four topics that make up the text. The choice of how many parts to divide the documents into and how many terms to study is arbitrary.  
+
+These words, since they are the ones most likely to be found together in one section of the publication rather than in another, will give a precise indication of the subject they refer to. It will be possible, therefore, to reconstruct the themes treated within the different texts and, consequently, to observe whether there are some that are repeatedly taken up over the years.  

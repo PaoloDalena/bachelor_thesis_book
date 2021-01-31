@@ -1,1 +1,9 @@
 # Acknowledgements {-}
+
+*There is also a thank you section in the official publication.*  
+
+*These are "personal" things, therefore not concretely relevant to the purpose of this translated publication and, above all, more likely to lose meaning when expressed in another language.*  
+
+*This obviously doesn't mean that I don't dedicate it to my parents or that I don't thank all the people I mentioned in the other document.*  
+
+*It just means that, if you are particularly curious, you will have to go and read them in Italian [here](https://github.com/PaoloDalena/bachelor_thesis_book/blob/main/imgs/thanks.png).*

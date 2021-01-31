@@ -12,4 +12,7 @@ bookdown::gitbook:
       facebook: no
       twitter: no
       github: yes
-  download: ["pdf", "epub"]
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  latex_engine: xelatex
+bookdown::epub_book: default

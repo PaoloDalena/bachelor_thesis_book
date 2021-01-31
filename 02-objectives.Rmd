@@ -2,9 +2,25 @@
 
 ## Lexical differences
 
+In the study of the Governor's Final Remarks, a first approach to understanding the evolution of the situation can begin with an analysis of lexical differences over time. It makes sense, in fact, to study how and if the ways in which people express themselves and construct sentences have changed in the ten years of reference.  
+
+In order to observe these peculiarities, it is necessary to study the distribution of the different parts of speech (nouns, adjectives, verbs, adverbs, pronouns, etc.), but it would also be useful to have more synthetic measures, such as the average length of sentences or the number of terms not repeated within the document. These last two data, in fact, could respectively provide us with relevant information about the complexity of the treatment, from the point of view of the subordination of the propositions (the longer the average sentence, the greater the subordination) and of the lexicon (the more words are not repeated in a text, the more lexically rich it will be).  
+
 ## Most used terms
+
+It is interesting to observe the presence of recurrent terms within the single documents or of the same documents grouped by periods, in order to study possible correlations between the economic situation of the moment under examination and the words most present. For example, it is natural to expect that in the years following the crisis of 2008-2009 the term "crisis" is strongly present in the documents.  
+
+A further objective of interest is to identify common words between the different documents over the years, so as to observe a trend or recurrent terms over time.  
 
 ## Positive or negative approach
 
+By means of opinion mining, it is possible to study whether words in documents are
+predominantly linked to positive or negative emotions.  
+
+In this way it is possible to understand how the general situation of the Italian economy is described and whether or not the tones of this approach have changed over time.  
+
 ## Recurring Topics
 
+Thanks to the potential of topic modeling, a technique that makes it possible to create probabilistic models that, through the analysis of words characterizing texts, identify the topics dealt with in a document, it will be possible to observe any recurring themes over the years.  
+
+As a result, it will be possible to examine how the discussion in the Annual Reports has changed over time and in what direction, but also which are the most important objects of analysis, as these will coincide with those that need to be talked about most often, i.e. the most present.  
